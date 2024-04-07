@@ -130,6 +130,15 @@ tibble::tribble(
     cvproj(what = "what", role = "role", items = "items")
 ```
 
+# Talks and Workshops
+
+\begin{itemize}
+  \item \textbf{06/2023} - Posterblitz at PuG 2023 - \textbf{Re-examining the Impact of Sleep on False Memories}
+  \item \textbf{06/2022} - Pre-conference workshop at PuG 2022 - \textbf{An Introduction to R}
+  \item \textbf{05/2021} - Pre-conference workshop at PuG 2021 - \textbf{An Introduction to R}
+  \item \textbf{11/2020} - Scientific colloquium Destatis (Federal Statistical Office) - \textbf{Building stronger evidence through reproducible and open science} - discussion together with Felix Henninger
+\end{itemize}
+
 # Publications
 
 \setlength{\parindent}{-0.5in}
