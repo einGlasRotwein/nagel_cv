@@ -1,0 +1,150 @@
+---
+title: Juliane Nagel
+format:
+  modern2-cv-pdf: default
+author: Juliane Nagel
+cvfont: raleway #texlive fonts like raleway,fetamont,gillius,comfortaa
+cvcolor: 
+  main: 008d6d
+  accent: 003c2e
+jobtitle: scientific employee
+sidebar:
+  image: juli_profile.jpg
+  bullets:
+    - née Tkotz
+    - reward / memory / sleep
+    - German (native), English (C2)
+  sections: 
+    - name: Contact
+      items:
+        - icon: map-marker
+          text: Ludwigshafen, Germany
+        - icon: phone
+          text: "+49 1734 309 076"
+        - icon: envelope
+          text: juliane.nagel@zi-mannheim.de
+        - icon: home
+          text: juli-nagel.de
+          href: https://juli-nagel.de
+        - icon: github
+          text: einGlasRotwein
+          href: https://github.com/einglasrotwein
+    - name: Education
+      items:
+        - text: "M.Sc. Psychology"
+          inst: "HHU Düsseldorf, Germany"
+          time: "10/2017 - 08/2019"
+          details: "Grade: 1.19 - Thesis: Keep Calm and Discuss: The Reception of Different Styles of Discourse in a Scientific Debate"
+        - text: "B.Sc. Psychology"
+          inst: "HHU Düsseldorf, Germany"
+          time: "10/2013 - 07/2017"
+          details: "Grade: 1.80 - Thesis: Investigating Choice Behaviour in Rats Opting Between Immediate and Delayed Aversive Options"
+execute: 
+  echo: false
+---
+
+```{r}
+#| label: cvevents
+cvevents <- function(tbl, when, what, where, descr) {
+
+    command_start <- "\\cvevent"
+    tbl[[where]] <- gsub("\n", " \\\\newline ", tbl[[where]])
+    res <- paste0(
+        command_start, "{", tbl[[when]], "}", 
+        "{", tbl[[what]], "}",
+        "{", tbl[[where]], "}",
+        "{", tbl[[descr]], "}"
+        )
+
+    cat(res, sep = "\n\n\n")
+}
+
+cvproj <- function(tbl,what,role,items){
+    command_start <- "\\cvproj"
+    res <- paste0(
+        command_start, "{", tbl[[what]], "}",
+        "{", tbl[[role]], "}",
+        "{", sapply(tbl[[items]], function(x)paste0(x,collapse = ", ")), "}"
+    )
+
+    cat(res, sep = "\n\n\n")
+}
+```
+
+# Research
+
+```{r}
+#| label: research
+#| output: asis
+tibble::tribble(
+    ~role, ~institution, ~dates, ~details,
+    "scientific employee", "RG Psychology \\& Neurobiology of Sleep and Memory\nCIMH, Mannheim, Germany", "10/2019 - present", "I investigate how reward influences our memory (and its neurological underpinnings). I also research the influence on sleep on memory.",
+    "student/research assistant", "Comparative Psychology\nHeinrich-Heine University Düsseldorf", "05/2016 - 08/2019",
+    'I collected data in a delay discounting paradigm, where rats had to choose between two outcomes delivered at different timepoints. Another project was the social maze, were rats made a choice between a reward for themselves, or for themselves and another rat. Lastly, in the "conformity paradigm", I helped to investigate whether rats passed on their food preferences to other rats.',
+    "research internship", "Translational Cognitive Neuroscience Lab\nUniversity of Cambridge", "11/2015 - 04/2016", "I assisted two PhD students in their work with rodent touchscreen boxes. In mice, we investigated the influence of fluoxetine various (motivational) cognitive tasks. In rats, we researched sustained attention, and in another project, we examined hippocampal neurogenesis in spatial pattern separation.",
+    "research internship", "Comparative Psychology\nHeinrich-Heine University Düsseldorf", "03/2015 - 06/2015", "In a short internship as part of my Bachelor's degree, I tested rats in delay discounting tasks."
+) |>
+    cvevents(when = "dates", what = "role", where = "institution", descr = "details")
+```
+
+# Family
+
+```{r}
+#| label: family
+#| output: asis
+tibble::tribble(
+    ~role, ~institution, ~dates, ~details,
+    "1st child", "", "09/2023", "From December 2023 to September 2024, I am working part time."
+) |>
+    cvevents(when = "dates", what = "role", where = "institution", descr = "details")
+```
+
+# Open Science
+
+```{r}
+#| label: opensci
+#| output: asis
+tibble::tribble(
+    ~what, ~role, ~items,
+    "Tools", "", "I preregister my experiments and have experience with Registered Reports. Where possible, my publications include open data and code, including detailed documentation. I use reproducible manuscripts.",
+    "community", "", "I am a member of the Open Science Office at the CIMH, Mannheim, where we try to increase all activities related to reproducible and transparent research at the CIMH. E.g., by organising talks and workshops, building infrastructure, or working on institutional policies. I am also part of the organising team behind the Mannheim Open Science meetup, a grassroot initiative where we organise talks and social gatherings for people interested in Open Science.",
+    "science communication", "",
+    'Since 2021, the DGPs and DGPA give out awards to young scientists for outstanding science communication. I help organising the award. Occasionally, I actively engage in SciComm activities myself, be it in the form of science slams or as a former team member of "psychologeek", a German science YouTube channel.'
+) |>
+    cvproj(what = "what", role = "role", items = "items")
+```
+
+# Skills
+
+```{r}
+#| label: skills
+#| output: asis
+tibble::tribble(
+    ~what, ~role, ~items,
+    "R", "advanced", "Data wrangling, statistical analyses, data visualisation, data simulation, reproducible manuscripts (Quarto, R Markdown), package development; limited experience with webscraping (rvest)",
+    "online experiments", "intermediate", "Full stack development of online studies. Frontend: JavaScript (jsPsych), HTML, CSS; Backend: PHP, SQL",
+    "Git", "intermediate", "Standard version control and collaborative coding on GitHub and GitLab",
+    "Matlab", "beginner", "fMRI analysis using SPM",
+    "graphic design", "intermediate", "design / retouch / digital drawings in GIMP"
+) |>
+    cvproj(what = "what", role = "role", items = "items")
+```
+
+# Publications
+
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+Erdfelder, E., **Nagel, J.**, Heck, D. W., & Petras, N. (2024). Uncovering null effects in null fields: The case of homeopathy. *Journal of Clinical Epidemiology, 166*, 111216. https://doi.org/10.1016/j.jclinepi.2023.11.006
+\break
+
+**Nagel, J.**, Morgan, D. P., Gürsoy, C. N., Kern, S., & Feld, G. (2023). Memory for Rewards Guides Retrieval. *PsyArXiv*. https://doi.org/10.31234/osf.io/nturm
+\break
+
+Alizadeh Asfestani, M., **Nagel, J.**, Beer, S., Nikpourian, G., Born, J., & Feld, G. B. (2023). Unfamiliar Contexts Compared to Familiar Contexts Impair Learning in Humans. Collabra: *Psychology, 9*(1), 71316. https://doi.org/10.1525/collabra.71316
+\break
+
+Dalmaijer, E. S., Van Rheede, J., Sperr, E. V., & **Tkotz, J.** (2021). Banana for scale: Gauging trends in academic interest by normalising publication rates to common and innocuous keywords (arXiv:2102.06418). *arXiv*. https://doi.org/10.48550/arXiv.2102.06418
+\break
+
+**Tkotz, J.**, Kienhues, D., Jucks, R., & Bromme, R. (2021). Keep Calm in Heated Debates: How People Perceive Different Styles of Discourse in a Scientific Debate. *Frontiers in Education, 5*. https://doi.org/10.3389/feduc.2020.572503
