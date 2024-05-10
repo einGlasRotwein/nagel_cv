@@ -144,10 +144,13 @@ tibble::tribble(
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
 
+**Nagel, J.**, Morgan, D. P., Gürsoy, C. N., Kern, S., & Feld, G. (2024). Memory for Rewards Guides Retrieval. *Communications Psychology, 2*(31), https://doi.org/10.1038/s44271-024-00074-9
+\break
+
 Erdfelder, E., **Nagel, J.**, Heck, D. W., & Petras, N. (2024). Uncovering null effects in null fields: The case of homeopathy. *Journal of Clinical Epidemiology, 166*, 111216. https://doi.org/10.1016/j.jclinepi.2023.11.006
 \break
 
-**Nagel, J.**, Morgan, D. P., Gürsoy, C. N., Kern, S., & Feld, G. (2023). Memory for Rewards Guides Retrieval. *PsyArXiv*. https://doi.org/10.31234/osf.io/nturm
+Simon, K., **Nagel, J.**, Gerchen, M.F., Guersoy, C., Meyer-Lindenberg, A., Kirsch, P., Dolan, R.J., Steffen, G., Feld, G.B. (2023) Reactivation strength during cued recall is modulated by graph distance within cognitive maps. *eLife* 12:RP93357, https://doi.org/10.7554/eLife.93357.3
 \break
 
 Alizadeh Asfestani, M., **Nagel, J.**, Beer, S., Nikpourian, G., Born, J., & Feld, G. B. (2023). Unfamiliar Contexts Compared to Familiar Contexts Impair Learning in Humans. Collabra: *Psychology, 9*(1), 71316. https://doi.org/10.1525/collabra.71316
